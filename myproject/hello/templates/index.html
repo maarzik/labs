@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block title %}Главная{% endblock %}
+
+{% block header %}Добро пожаловать{% endblock %}
+
+{% block content %}
+<p>{{ message }}</p>
+<p>Список языков:</p>
+<ul>
+{% for lang in langs %}
+    <li>{{ lang }}</li>
+{% endfor %}
+</ul>
+<p>Пользователь: {{ user.name }}, возраст: {{ user.age }}</p>
+<p>Сегодня: {% now "d.m.Y H:i" %}</p>
+<img src="{{ image_url }}" alt="Пример картинки">
+{% endblock %}
