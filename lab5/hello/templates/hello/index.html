@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Простая форма</title></head>
+<body>
+  <h2>Простая HTML-форма</h2>
+  <form method="post" action="/postuser/">
+    {% csrf_token %}
+    <p>Name:<br><input name="name" /></p>
+    <p>Age:<br><input name="age" type="number" /></p>
+    <input type="submit" value="Send" />
+  </form>
+  <p><a href="/form/">Перейти к Django-форме</a></p>
+</body>
+</html>

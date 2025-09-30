@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8"><title>Django Form</title></head>
+<body>
+  <h2>Django Form</h2>
+  <form method="post" novalidate>
+    {% csrf_token %}
+    <table>
+      {{ form }}
+    </table>
+    <input type="submit" value="Send" />
+  </form>
+  <p><a href="/">К простой форме</a></p>
+</body>
+</html>
